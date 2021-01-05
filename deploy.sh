@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:boboooooo/Element-Pro-Crud-Doc.git master:gh-pages
+git push -f git@github.com:BoBoooooo/Element-Pro-Crud-Doc.git master:gh-pages
 
 cd -
