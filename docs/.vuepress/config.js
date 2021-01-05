@@ -80,7 +80,7 @@ module.exports = {
 function genEssentialsSidebar(type = '') {
   let mapArr
   if (type === 'guide') {
-    mapArr = ['/guide/', '/guide/intro/start.md']
+    mapArr = ['/guide/', '/guide/intro/start.md', '/guide/intro/option.md']
   } else if (type === 'frameworks') {
     mapArr = [
       '/frameworks/essentials/CrudTable.md',
