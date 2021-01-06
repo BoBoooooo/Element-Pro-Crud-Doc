@@ -15,7 +15,7 @@ npm i element-pro-crud -s
   ```javascript
   import ElementProCrud from 'element-pro-crud';
   import ElementUI from 'element-ui';
-  import 'element-pro-crud/lib/ProCrud.css'; // 先引入插件css,避免css污染
+  import 'element-pro-crud/lib/ProCrud.css'; 
   import 'element-ui/lib/theme-chalk/index.css';
 
   Vue.use(ElementUI)
