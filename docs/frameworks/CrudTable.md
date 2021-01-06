@@ -1,3 +1,6 @@
+---
+pageClass: crud-table
+---
 
 # API
 ## Props
