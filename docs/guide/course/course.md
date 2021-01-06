@@ -1,6 +1,12 @@
 # CrudTable
 
-CrudTable将为我们自动完成增删改查的开发,将通过配置的json自动渲染表格以及表单。
+CrudTable将为我们自动构建增删改查页面
+- 通过json自动渲染表格以及表单
+- 高级查询检索功能
+
+## 效果
+![](https://pic.downk.cc/item/5ff3ce3c3ffa7d37b38999ad.png)
+![](https://pic.downk.cc/item/5ff529f63ffa7d37b3634b91.png)
 
 ## 使用步骤
 
@@ -15,7 +21,7 @@ CrudTable将为我们自动完成增删改查的开发,将通过配置的json自
 ```javascript
 // PersonModule.vue
 <template>
-  <CrudTable :tableName="tableName" />
+  <CrudTable ref="table" :tableName="tableName" />
 <template>
 export default {
   name: 'PersonModule',
@@ -47,7 +53,7 @@ export default {
 	"orderCondition": "timestamp desc", // 排序条件 field asc | desc
 	"searchCondition": [{               // 查询条件
 		"field": "jobno",                
-		"operator": "like",               // like | eq | neq | notNull | isNull | gt | lt | egt | elt
+		"operator": "like",              
 		"value": "2019"
 	}, {
 		"field": "personname",
@@ -58,6 +64,15 @@ export default {
 	"pageSize": 20                      // 页码大小
 }
 ```
+- **`searchCondition`为高级查询数组,包含需要查询的字段名`field`操作符`operator`查询内容`value`**
+
+- **`operator`操作符支持数据库常见的几种关键字**
+
+|  eq |  like |  neq | notNull  |  isNull | gt  | lt  | egt  |elt   |
+| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| =  | like '%%' | !=  |not null  |  is null |   > | <   |  >= |  <= |
+
+
 上述查询条件会生成如下sql
 ``` sql
 select * from person where jobno like '%2019%' and personname like '%张三%' ORDER BY `timestamp` desc LIMIT 0,20
@@ -174,6 +189,22 @@ select * from person where jobno like '%2019%' and personname like '%张三%' OR
 		"sortable": "false",
 		"searchable": false
 	}]
+}
+
+```
+
+类型说明
+```typescript
+interface columnConfig {
+	prop: string; // 字段名
+	label: string; // 表头
+	minWidth: number; // 最小宽度
+	align: boolean; // 内容对齐方式
+	headerAlign: boolean; // 表头对齐方式
+	slotName: string; // 自定义插槽名
+	fixed: string; // 列对齐方式
+	sortable: 'false' | 'custom' // 是否可排序
+	searchable: boolean // 是否可查询
 }
 
 ```
@@ -703,10 +734,6 @@ select * from person where jobno like '%2019%' and personname like '%张三%' OR
 	}
 }
 ```
-
-## 效果
-![](https://pic.downk.cc/item/5ff3ce3c3ffa7d37b38999ad.png)
-
 
 
 

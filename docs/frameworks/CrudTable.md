@@ -7,7 +7,7 @@ pageClass: crud-table
 
 |          参数          |                               说明                                |      类型       |                 可选值                  |  默认值   |
 | :--------------------: | :---------------------------------------------------------------: | :-------------: | :-------------------------------------: | :-------: |
-| `el-table props` |          el-table原生属性见文档          |          https://element.eleme.cn/#/zh-CN/component/table            |
+| `el-table props` |          el-table原生属性见[文档](https://element.eleme.cn/#/zh-CN/component/table)          |                    |
 |       listField        |                        response 中数据位置                        |     String      |             data/data.list              | data.list |
 |      setReadOnly       | GenerateFormDialog 中的表单禁用.null 表示均可编辑;{}表示全部只读; |     Object      |   null/{}/{whiteList:{},blackList:{}}   |   null    |  |
 |       isMultiple       |                           是否开启多选                            |     Boolean     |               true,false                |   false   |
@@ -88,8 +88,8 @@ pageClass: crud-table
 ## Events
 
 | 事件名称  |             说明             |                      回调参数                      |
-| :-------: | :--------------------------: | :------------------------------------------------: |
-| `el-table events` |          el-table原生事件见文档          |          https://element.eleme.cn/#/zh-CN/component/table            |
+| :---------------: | :--------------------------: | :------------------------------------------------: |
+| `el-table events` |          el-table原生事件见[文档](https://element.eleme.cn/#/zh-CN/component/table)         |                      |
 |   done    |       表格数据请求完成       |              整个 CrudTable 组件对象               |
 | selection-change |           多选事件           |              选中的行 (params: Array)              |
 |  form-change   | 监听 dialog 中 form 对象改变 | 返回当前表单对象以及当前表单 json (params: Object) |
@@ -111,7 +111,3 @@ pageClass: crud-table
 |   方法名    |     说明     | 参数 |
 | :---------: | :----------: | :--: |
 | tableReload | 重新加载列表 |  -   |
-
-## TODO
-- tree-select 懒加载
-- 表单表格设计器 dev模式
