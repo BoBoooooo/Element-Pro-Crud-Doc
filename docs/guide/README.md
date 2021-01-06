@@ -23,7 +23,8 @@ pageClass: getting-started
 
 ElementProCrud 接管了翻页，页码改变，数据请求,表格渲染，表单渲染等操作，理论上你通过表单json和表格json，就可以生成一个一键CRUD的页面。
 
-## 🦄 更多功能
+<h2>🦄 更多功能</h2>
+
 一个完整的CRUD页面除了Table,Form之外，还需要一个查询表单，查询表单很大程度上也是根据列来生成的，为了减少这部分的工作量，ElementProCrud会通过表格json来自动生成查询表单。
 ![](https://pic.downk.cc/item/5ff533423ffa7d37b36ad7fa.png)
 
