@@ -32,7 +32,7 @@ module.exports = {
           },
           {
             text: '在线演示',
-            link: 'http://server.boboooooo.top:9999/admin'
+            link: 'http://server.boboooooo.top:9998'
           }
         ],
         sidebar: {
