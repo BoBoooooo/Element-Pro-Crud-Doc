@@ -6,6 +6,9 @@ set -e
 # 生成静态文件
 npm run build
 
+# 复制CNAME文件到发布目录,自定义域名
+cp CNAME docs/.vuepress/dist
+
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
