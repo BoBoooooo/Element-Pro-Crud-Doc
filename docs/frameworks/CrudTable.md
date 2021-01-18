@@ -7,10 +7,11 @@ pageClass: crud-table
 
 |          参数          |                               说明                                |      类型       |                 可选值                  |  默认值   |
 | :--------------------: | :---------------------------------------------------------------: | :-------------: | :-------------------------------------: | :-------: |
-| `el-table props` |          el-table原生属性见[文档](https://element.eleme.cn/#/zh-CN/component/table)          |                    |
+| `el-table props` |          el-table原生属性见文档          |          https://element.eleme.cn/#/zh-CN/component/table            |
 |       columns        |                       表格json置                        |     Object      |             -             | null |
+|       searchMode        |                        查询区域模式                        |     String      |             popover/cover            | popover |
 |       listField        |                        response 中数据位置                        |     String      |             data/data.list              | data.list |
-|      setReadOnly       | GenerateFormDialog 中的表单禁用.null 表示均可编辑;{}表示全部只读; |     Object      |   null/{}/{whiteList:{},blackList:{}}   |   null    |  |
+|      readOnly       | GenerateFormDialog 中的表单禁用.null 表示均可编辑;{}表示全部只读; |     Boolean      |   true/false   |   false    |  |
 |       isMultiple       |                           是否开启多选                            |     Boolean     |               true,false                |   false   |
 |       emptyText        |                      列表数据为空时显示文字                       |     String      |                    -                    | 暂无数据  |
 |        prefill         |                      表单预填项(赋值初始值)                       |     Object      |                    -                    |   null    |
@@ -54,7 +55,6 @@ pageClass: crud-table
 ## Props 补充说明
 
 - `visibleList`
-
 ```
   // 内部元素显示控制
   {
@@ -73,7 +73,6 @@ pageClass: crud-table
 ```
 
 - `textMap`
-
 ```
 // 按钮文字Map
 {
@@ -81,10 +80,9 @@ pageClass: crud-table
   edit: '编辑',
   del: '删除',
   detail: '查看',
+  multiDel: '批量删除'
 }
 ```
-
-
 
 ## Events
 
