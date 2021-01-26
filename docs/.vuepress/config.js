@@ -32,7 +32,7 @@ module.exports = {
           },
           {
             text: '在线演示',
-            link: 'http://server.boboooooo.top:9998'
+            link: 'http://server.boboooooo.top:9997'
           }
         ],
         sidebar: {
@@ -45,19 +45,24 @@ module.exports = {
             {
               title: '教程',
               collapsable: false,
-              children: ['/guide/course/course.md']
+              children: [
+                '/guide/course/ProTable.md',
+                '/guide/course/CrudTable.md',
+                '/guide/course/GenerateForm.md',
+                '/guide/course/FormDesigner.md',
+                '/guide/course/TableDesigner.md'
+              ]
             }
           ],
           '/frameworks/': [
             {
-              title: 'CrudTable 组件',
+              title: 'API',
               collapsable: false,
-              children: ['/frameworks/CrudTable.md']
-            },
-            {
-              title: 'GenerateForm 组件',
-              collapsable: false,
-              children: ['/frameworks/GenerateForm.md']
+              children: [
+                '/frameworks/ProTable.md',
+                '/frameworks/CrudTable.md',
+                '/frameworks/GenerateForm.md'
+              ]
             }
           ]
         },

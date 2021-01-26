@@ -2,13 +2,14 @@
 pageClass: crud-table
 ---
 
-# API
+# CrudTable
+  CrudTable基于ProTable封装了的增删改查功能。
 ## Props
 
 |          参数          |                               说明                                |      类型       |                 可选值                  |  默认值   |
 | :--------------------: | :---------------------------------------------------------------: | :-------------: | :-------------------------------------: | :-------: |
 | `el-table props` |          el-table原生属性见文档          |          https://element.eleme.cn/#/zh-CN/component/table            |
-|       columns        |                       表格json置                        |     Object      |             -             | null |
+|       columns        |                       表格json                        |     Object      |             -             | null |
 |       searchMode        |                        查询区域模式                        |     String      |             popover/cover            | popover |
 |       listField        |                        response 中数据位置                        |     String      |             data/data.list              | data.list |
 |      readOnly       | GenerateFormDialog 中的表单禁用.null 表示均可编辑;{}表示全部只读; |     Boolean      |   true/false   |   false    |  |
@@ -38,7 +39,7 @@ pageClass: crud-table
 |    btnAddVisibleFunc    |                    表格行中的添加按钮是否显示事件                     |    Function     |                    Function(row)                    |   -    |
 |    btnEditVisibleFunc    |                    表格行中的编辑按钮是否显示事件                     |    Function     |                    Function(row)                    |   -    |
 |    btnDetailVisibleFunc    |                    表格行中的查看按钮是否显示事件                     |    Function     |                    Function(row)                    |   -    |
-|     showPagination     |                      自定义列表 config 请求                       |     Boolean     |               true/false                |   true    |
+|     showPagination     |                      是否显示分页                      |     Boolean     |               true/false                |   true    |
 |      remoteFuncs       |               远程数据方法(用于表单内远端数据请求)                |     Object      |                    -                    |    {}     |
 |      pageSize          |                     动态传入分页                     | Array |                    -                    |   [10,50,100]    |
 |      maxHeightMinus    |                     表格自适应高度需要减去的高度值                     | Number |                    -                    |   285    |
@@ -89,7 +90,7 @@ pageClass: crud-table
 | 事件名称  |             说明             |                      回调参数                      |
 | :---------------: | :--------------------------: | :------------------------------------------------: |
 | `el-table events` |          el-table原生事件见[文档](https://element.eleme.cn/#/zh-CN/component/table)         |                      |
-|   done    |       表格数据请求完成       |              整个 CrudTable 组件对象               |
+|   done    |       表格数据请求完成       |              整个 ProTable 组件对象               |
 | selection-change |           多选事件           |              选中的行 (params: Array)              |
 |  form-change   | 监听 dialog 中 form 对象改变 | 返回当前表单对象以及当前表单 json (params: Object) |
 | form-btn-on-click |           表单内按钮组件点击回调           |             widget(表单组件json)              |
@@ -104,6 +105,8 @@ pageClass: crud-table
 |    btnCustom    |      自定义操作按钮 参数为 {row}     |
 |    seniorSearchForm    |      自定义高级查询表单      |
 |    dialogFooter    |      弹出表单右侧底部slot     |
+| append  |           el-table原生slot见[文档](https://element.eleme.cn/#/zh-CN/component/table)             |
+| `${column.prop}_header` | 自定义列表头 |
 
 ## Methods
 

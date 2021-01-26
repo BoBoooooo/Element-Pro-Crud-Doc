@@ -9,7 +9,6 @@ npm i element-pro-crud -s
 ```
 
 支持完整引入及按需引入,*`该插件基于ElementUI封装,注意引用顺序`*
-
 ### 完整引入
   
   ```javascript
@@ -34,13 +33,14 @@ npm i element-pro-crud -s
   Vue.use(GenerateForm);
 
   import Vue from 'vue';
-  import { GenerateForm, CrudTable, FormDesignerDialog, TableDesignerDialog } from 'element-pro-crud';
+  import { GenerateForm, ProTable, CrudTable, FormDesigner, TableDesigner } from 'element-pro-crud';
   import App from './App.vue';
 
-  Vue.use(GenerateForm); // 不需要传options
+  Vue.use(GenerateForm);
+  Vue.use(ProTable);
   Vue.use(CrudTable, options);// options介绍如上,getTables,getFormKey两个方法可以缺省
-  Vue.use(FormDesignerDialog, options);// options介绍如上
-  Vue.use(TableDesignerDialog, options);// options介绍如上
+  Vue.use(FormDesigner, options);// options介绍如上
+  Vue.use(TableDesigner, options);// options介绍如上
 
   new Vue({
     el: '#app',
@@ -96,8 +96,10 @@ npm i element-pro-crud -s
 
 - `GenerateForm` 根据表单设计器json自动渲染表单
 
-- `FormDesignerDialog`  表单设计器
+- `ProTable`  二次封装el-table
 
-- `TableDesignerDialog`  表格设计器
+- `CrudTable`  高级增删改查 CrudTable
 
-- `CrudTable`  高级增删改查 ProTable
+- `FormDesigner`  表单设计器
+
+- `TableDesigner`  表格设计器
