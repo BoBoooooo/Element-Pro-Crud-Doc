@@ -3,14 +3,13 @@
 假设已经熟悉了ProTable和GenerateForm的基本概念，这就手摸手开启第三层封装的道路。
 
 ## 前情回顾
-- `ProTable`基于el-table封装,支持通过json动态生成表格。
-- `GenerateForm`基于el-form封装,支持通过json动态生成表单。
+- `ProTable` 通过json动态生成表格。
+- `GenerateForm` 通过json动态生成表单。
+- 在日常开发过程中,仅仅这2个组件并不满足一键Crud的需求。
 
-> 在日常开发过程中,仅仅这2个组件并不满足一键Crud的需求。
+**`CrudTable`应运而生,结合上述2个组件继续封装,自动生成增删改查套件。**
 
-> **`CrudTable`应运而生,结合上述2个组件继续封装,将为我们自动生成增删改查套件。**
-
-> **特殊业务场景可以自行封装上述2个组件**
+*有需要也可以自行封装上述2个组件,不引入CrudTable组件即可！*
 
 ## 组件概述
 
@@ -32,6 +31,132 @@
 ![](https://pic.downk.cc/item/5ff3ce3c3ffa7d37b38999ad.png)
 ![](https://pic.downk.cc/item/5ff529f63ffa7d37b3634b91.png)
 
+## 初始化
+
+注册时需要传入`获取表单、表格json`以及`增删改查通用封装`3个方法
+
+
+```js
+  Vue.use(CrudTable, {
+    getFormDetail: (tablename) => AxiosPromise(formJSON);// 获取某个表单设计json
+    getTableDetail: (tablename) => AxiosPromise(tableJSON);// 获取某个表格设计json
+    crud: (dml: DML, tableName: string, data?: object, params?: object)=> AxiosPromise; // 通用CRUD封装
+  });
+```
+
+- crud方法
+增删改查axios方法通用封装
+```js
+import axios from '@/plugins/axios';
+
+interface optionsType {
+  url: string; // 请求地址
+  method: string; // 请求方法 post / get
+  data?: object; // body报体内容
+  params?: object; // queryString内容
+  headers?: any; // 自定义头,用于设置是否加密请求
+}
+
+/**
+ * 操作类型枚举
+ */
+export enum DML {
+  INSERT = 'add',
+  UPDATE = 'update',
+  DELETE = 'delete',
+  SELECT = 'list',
+  TREE = 'tree',
+  TREE_LAZY = 'treeByParentID',
+  DETAIL = 'detail',
+  DELETES = 'deleteByIds',
+}
+
+/**
+ * @param dml 操作类型
+ * @param tableName 数据库表名
+ * @param data body data
+ * @param params query Params
+ */
+export function crud(dml: DML, tableName: string, data: object = {}, params: any = null) {
+  const options: optionsType = {
+    url: `/${tableName}/${dml}`, // 例如person表的查询接口为  /person/list
+    method: 'post',
+  };
+  // 以下请求通过包体传参
+  if ('list,treeByParentID'.includes(dml)) {
+    // list接口高级查询条件拼接
+    options.data = {
+      orderCondition: '',
+      searchCondition: [],
+      pageIndex: 0,
+      pageSize: 0,
+      ...data,
+    };
+  } else {
+    options.data = data;
+  }
+  options.params = params;
+
+  return axios;
+}
+
+```
+- 获取表单表格JSON方法
+``` js
+import axios from 'axios';
+
+/**
+ * 获取数据库中所有表名
+ *
+ * @returns 所有表名
+ */
+export function getTables() {
+  return axios({
+    url: '/form/getTables',
+    method: 'post',
+  });
+}
+
+/**
+ * 根据表名获取表格的设计json等信息
+ *
+ * @param {String} tablename
+ * @returns 表格设计json
+ */
+export function getTableDetail(tablename) {
+  return axios({
+    url: '/dynamictables/detail',
+    method: 'post',
+    params: { tablename },
+  });
+}
+
+/**
+ * 获取所有表单设计json
+ * @param tablename
+ */
+export function getFormDetail(tablename) {
+  return axios({
+    url: '/form/detail',
+    method: 'post',
+    params: { tablename },
+  });
+}
+
+/**
+ * 获取表中所有字段信息
+ * @param {String} tablename
+ */
+export function getFormKey(tablename) {
+  return axios({
+    url: '/form/getKey',
+    method: 'post',
+    params: { tablename },
+  });
+}
+
+
+```
 ## 使用步骤
 
 - 绘制表单
@@ -57,15 +182,21 @@ export default {
 };
 ```
 
-上述代码会自动为我们生成对于person表的增删改查页面,默认读取的表单以及表格名称为`person`
+上述示例代码:
+
+**默认读取的表单、表格名称为`person`**
+
+**默认请求`/person/list`接口获取列表数据**
+
+如需自定义表单名称prop传入 `dialogFormDesignerName="自定义表单name"`
+
+自定义表格名称prop传入 `tableDesignerName="自定义表格name"`
 
 ## 加载过程
-``` js
-// 1.请求后台接口获取表格json
-// 2.请求后台接口获取表单json
-// 3.请求列表数据
-// 4.渲染列表及表单
-```
+- 请求后台接口获取表格json (例如: /form/detail?tablename=person)
+- 请求后台接口获取表单json (例如: /dynamictables/detail?tablename=person)
+- 请求列表数据 (例如: /person/list)
+- 渲染列表及表单
 
 ## 列表数据请求格式
 
@@ -87,7 +218,9 @@ export default {
 	"pageSize": 20                      // 页码大小
 }
 ```
-- **`searchCondition`为高级查询数组,包含需要查询的字段名`field`操作符`operator`查询内容`value`**
+- **`searchCondition`为高级查询数组:**
+
+	**字段名`field`操作符`operator`查询内容`value`**
 
 - **`operator`操作符支持数据库常见的几种关键字**
 
@@ -216,7 +349,7 @@ select * from person where jobno like '%2019%' and personname like '%张三%' OR
 
 ```
 
-类型说明
+### 类型说明
 ```typescript
 interface columnConfig {
 	prop: string; // 字段名

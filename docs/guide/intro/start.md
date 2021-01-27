@@ -8,27 +8,23 @@
 npm i element-pro-crud -s
 ```
 
-支持完整引入及按需引入,*`该插件基于ElementUI封装,注意引用顺序`*
-### 完整引入
-  
-  ```javascript
-  import ElementProCrud from 'element-pro-crud';
-  import ElementUI from 'element-ui';
-  import 'element-pro-crud/lib/ProCrud.css'; 
-  import 'element-ui/lib/theme-chalk/index.css';
+支持完整引入及按需引入,_`该插件基于ElementUI封装,注意引用顺序`_
 
-  Vue.use(ElementUI)
-  Vue.use(ElementProCrud, {
-    getTables: Function; // axios方法获取数据库中所有的表
-    getFormKey: Function; // axios方法获取某张表中所有字段信息
-    getFormDetail: Function;// 获取某个表单设计json
-    getTableDetail: Function;// 获取某个表格设计json
-    crud: (dml: DML, tableName: string, data?: object, params?: object)=> AxiosPromise; // 通用CRUD封装
-  });
-  ```
-  
+### 完整引入
+
+```javascript
+import ElementProCrud from 'element-pro-crud'
+import ElementUI from 'element-ui'
+import 'element-pro-crud/lib/ProCrud.css'
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI)
+Vue.use(ElementProCrud)
+```
+
 ### 按需引入
-``` javascript
+
+```javascript
   import { GenerateForm } from 'element-pro-crud';
   Vue.use(GenerateForm);
 
@@ -38,20 +34,23 @@ npm i element-pro-crud -s
 
   Vue.use(GenerateForm);
   Vue.use(ProTable);
-  Vue.use(CrudTable, options);// options介绍如上,getTables,getFormKey两个方法可以缺省
-  Vue.use(FormDesigner, options);// options介绍如上
-  Vue.use(TableDesigner, options);// options介绍如上
+  Vue.use(FormDesigner);
+  Vue.use(TableDesigner);
+  Vue.use(CrudTable, {
+      getFormDetail: (tablename) => AxiosPromise(formJSON);// 获取某个表单设计json
+      getTableDetail: (tablename) => AxiosPromise(tableJSON);// 获取某个表格设计json
+      crud: (dml: DML, tableName: string, data?: object, params?: object)=> AxiosPromise; // 通用CRUD封装
+  })
 
   new Vue({
     el: '#app',
     render: h => h(App)
   });
-
 ```
 
 ## CDN
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -89,17 +88,16 @@ npm i element-pro-crud -s
     });
   </script>
 </html>
-  ```
-
+```
 
 ## 组件列表
 
-- `GenerateForm` 根据表单设计器json自动渲染表单
+- `GenerateForm` 根据表单设计器 json 自动渲染表单
 
-- `ProTable`  二次封装el-table
+- `ProTable` 二次封装 el-table
 
-- `CrudTable`  高级增删改查 CrudTable
+- `CrudTable` 高级增删改查 CrudTable
 
-- `FormDesigner`  表单设计器
+- `FormDesigner` 表单设计器
 
-- `TableDesigner`  表格设计器
+- `TableDesigner` 表格设计器

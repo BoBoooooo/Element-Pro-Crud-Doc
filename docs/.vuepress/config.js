@@ -46,9 +46,9 @@ module.exports = {
               title: '教程',
               collapsable: false,
               children: [
+                '/guide/course/GenerateForm.md',
                 '/guide/course/ProTable.md',
                 '/guide/course/CrudTable.md',
-                '/guide/course/GenerateForm.md',
                 '/guide/course/FormDesigner.md',
                 '/guide/course/TableDesigner.md'
               ]
@@ -61,7 +61,9 @@ module.exports = {
               children: [
                 '/frameworks/ProTable.md',
                 '/frameworks/CrudTable.md',
-                '/frameworks/GenerateForm.md'
+                '/frameworks/GenerateForm.md',
+                '/frameworks/FormDesigner.md',
+                '/frameworks/TableDesigner.md'
               ]
             }
           ]
@@ -85,7 +87,7 @@ module.exports = {
 function genEssentialsSidebar(type = '') {
   let mapArr
   if (type === 'guide') {
-    mapArr = ['/guide/', '/guide/intro/start.md', '/guide/intro/option.md']
+    mapArr = ['/guide/', '/guide/intro/start.md']
   } else if (type === 'frameworks') {
     mapArr = [
       '/frameworks/essentials/CrudTable.md',
