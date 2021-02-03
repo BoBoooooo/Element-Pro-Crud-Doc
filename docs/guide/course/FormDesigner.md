@@ -1,4 +1,4 @@
-# FormDesigner
+# 表单设计器
 
 表单设计器,基于`vue-form-making`开源版二次封装。
 

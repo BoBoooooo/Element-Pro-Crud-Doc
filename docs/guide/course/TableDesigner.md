@@ -1,7 +1,4 @@
----
-pageClass: custom-page-class
----
-# TableDesigner
+# 表格设计器
 
 表格设计器,可视化配置 tableJSON
 

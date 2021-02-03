@@ -15,7 +15,8 @@ module.exports = {
     [
       'script',
       {
-        src: 'https://cdn.jsdelivr.net/npm/element-pro-crud/lib/ProCrud.umd.js'
+        src:
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@latest/lib/ProCrud.umd.js'
       }
     ],
     [
@@ -29,7 +30,8 @@ module.exports = {
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/element-pro-crud/lib/ProCrud.css'
+        href:
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@latest/lib/ProCrud.css'
       }
     ],
     [
