@@ -1,6 +1,14 @@
+/*
+ * @file: https://vuepress-theme-reco.recoluan.com/
+ * @author: BoBo
+ * @copyright: BoBo
+ * @Date: 2020-11-18 12:55:02
+ */
 module.exports = {
   title: 'Element-Pro-Crud',
-  description: '一键增删改查',
+  description: '基于ElementUI一键CRUD神器',
+  theme: 'reco',
+  author: 'BoBo',
   base: '/',
   head: [
     [
@@ -12,6 +20,13 @@ module.exports = {
     ]
   ],
   themeConfig: {
+    type: 'blog',
+    author: 'BoBo',
+    authorAvatar: '/home.png',
+    codeTheme: 'tomorrow', // default 'tomorrow'
+    mode: 'light', // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
+    modePicker: false, // 默认 true，false 不显示模式调节按钮，true 则显示
+    noFoundPageByTencent: false,
     sidebar: 'auto',
     sidebarDepth: 2,
     locales: {
@@ -20,19 +35,23 @@ module.exports = {
         nav: [
           {
             text: '使用指南',
-            link: '/guide/'
+            link: '/guide/',
+            icon: 'reco-home'
           },
           {
             text: '文档',
-            link: '/frameworks/CrudTable'
+            link: '/frameworks/CrudTable',
+            icon: 'reco-document'
           },
           {
             text: 'GitHub',
-            link: 'https://github.com/BoBoooooo/Element-Pro-Crud'
+            link: 'https://github.com/BoBoooooo/Element-Pro-Crud',
+            icon: 'reco-github'
           },
           {
             text: '在线演示',
-            link: 'http://server.boboooooo.top:9997'
+            link: 'http://server.boboooooo.top:9997',
+            icon: 'reco-eye'
           }
         ],
         sidebar: {
@@ -81,7 +100,11 @@ module.exports = {
       }
     }
   },
-  ga: 'UA-109340118-1'
+  ga: 'UA-109340118-1',
+  markdown: {
+    // 显示代码块行号
+    lineNumbers: false
+  }
 }
 
 function genEssentialsSidebar(type = '') {

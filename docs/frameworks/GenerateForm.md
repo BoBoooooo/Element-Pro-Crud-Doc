@@ -1,6 +1,8 @@
 # GenerateForm
 
-表单生成器
+::: tip
+  通过json渲染表单
+:::
 
 ## Props
 

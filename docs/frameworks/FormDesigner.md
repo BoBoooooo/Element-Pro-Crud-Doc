@@ -1,6 +1,8 @@
 # FormDesigner
 
-表单生成器
+::: tip
+  可视化表单生成器
+:::
 
 ## Props
 

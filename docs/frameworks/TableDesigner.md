@@ -1,6 +1,8 @@
 # TableDesigner
 
-表格生成器
+::: tip
+  可视化表格生成器
+:::
 
 ## Props
 

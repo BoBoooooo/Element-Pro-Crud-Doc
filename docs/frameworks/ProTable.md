@@ -4,7 +4,9 @@ pageClass: crud-table
 
 # ProTable
 
-基于el-table二次封装，托管分页、表格、查询等功能。
+::: tip
+  基于el-table二次封装,通过json渲染table。托管分页、表格、查询等功能。
+:::
 
 ## Props
 
