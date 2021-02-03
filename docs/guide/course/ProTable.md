@@ -2,14 +2,15 @@
 
 ProTable 基于 El-Table 做了二次封装，托管了分页，查询表单，数据表格.
 
-- 通过表格json渲染(可通过`TableDesigner`表格设计器可视化配置)
+- 通过表格 json 渲染(可通过`TableDesigner`表格设计器可视化配置)
 - 查询表单
 - 托管分页
 
 ## 效果
 
 ::: demo
-``` html
+
+```html
 <template>
   <pro-table
     ref="table"
@@ -37,89 +38,89 @@ export default {
   name: 'PersonProTable',
   data() {
     return {
-      columns: {
-        name: 'person',
-        position: '人员信息列表',
-        columns: [
-          {
-            prop: 'jobno',
-            label: '工号',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-          {
-            prop: 'personname',
-            label: '姓名',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-          {
-            prop: 'jobtime',
-            label: '入职时间',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-          {
-            prop: 'deptname',
-            label: '所在部门',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-          {
-            prop: 'post',
-            label: '岗位',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-          {
-            prop: 'level',
-            label: '职级',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-          {
-            prop: 'mobile',
-            label: '联系方式',
-            
-            align: 'center',
-            headerAlign: 'center',
-            showOverflowTooltip: true,
-            sortable: 'custom',
-            slotName: '',
-            searchable: true,
-          },
-        ],
-      },
+    columns:  {
+  "columns": [
+    {
+      "prop": "jobno",
+      "label": "工号",
+      "minWidth": "100",
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "columnFormatter",
+      "searchable": true
+    },
+    {
+      "prop": "personname",
+      "label": "姓名",
+      "minWidth": "70",
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "columnFormatter",
+      "searchable": true
+    },
+    {
+      "prop": "jobtime",
+      "label": "入职时间",
+      "minWidth": 140,
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "",
+      "searchable": true
+    },
+    {
+      "prop": "deptname",
+      "label": "所在部门",
+      "minWidth": "100",
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "",
+      "searchable": true
+    },
+    {
+      "prop": "post",
+      "label": "岗位",
+      "minWidth": "100",
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "",
+      "searchable": true
+    },
+    {
+      "prop": "level",
+      "label": "职级",
+      "minWidth": "100",
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "",
+      "searchable": true
+    },
+    {
+      "prop": "mobile",
+      "label": "联系方式",
+      "minWidth": 140,
+      "align": "center",
+      "headerAlign": "center",
+      "showOverflowTooltip": true,
+      "sortable": "custom",
+      "slotName": "",
+      "searchable": true
+    }
+  ],
+  "name": "person",
+  "position": "员工管理"
+}
     };
   },
 
@@ -214,12 +215,9 @@ export default {
   },
 };
 </script>
-
-
 ```
 
 :::
-
 
 ## 基础使用
 
@@ -232,121 +230,121 @@ export default {
 </template>
 
 <script>
-import { Vue, Component} from 'vue-property-decorator';
+import { Vue, Component } from "vue-property-decorator";
 
 @Component({
-  name: 'ProTable',
+  name: "ProTable",
 })
 export default class ProTable extends Vue {
   columns = {
-    name: 'person',
-    position: '人员信息列表',
     columns: [
       {
-        prop: 'jobno',
-        label: '工号',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "jobno",
+        label: "工号",
+        minWidth: "100",
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "columnFormatter",
         searchable: true,
       },
       {
-        prop: 'personname',
-        label: '姓名',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "personname",
+        label: "姓名",
+        minWidth: "70",
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "columnFormatter",
         searchable: true,
       },
       {
-        prop: 'jobtime',
-        label: '入职时间',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "jobtime",
+        label: "入职时间",
+        minWidth: 140,
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "",
         searchable: true,
       },
       {
-        prop: 'deptname',
-        label: '所在部门',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "deptname",
+        label: "所在部门",
+        minWidth: "100",
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "",
         searchable: true,
       },
       {
-        prop: 'post',
-        label: '岗位',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "post",
+        label: "岗位",
+        minWidth: "100",
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "",
         searchable: true,
       },
       {
-        prop: 'level',
-        label: '职级',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "level",
+        label: "职级",
+        minWidth: "100",
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "",
         searchable: true,
       },
       {
-        prop: 'mobile',
-        label: '联系方式',
-        
-        align: 'center',
-        headerAlign: 'center',
+        prop: "mobile",
+        label: "联系方式",
+        minWidth: 140,
+        align: "center",
+        headerAlign: "center",
         showOverflowTooltip: true,
-        sortable: 'custom',
-        slotName: '',
+        sortable: "custom",
+        slotName: "",
         searchable: true,
       },
     ],
+    name: "person",
+    position: "员工管理",
   };
 
   async request(data) {
-	// 请求相应接口获取data以及total
+    // 请求相应接口获取data以及total
     const res = await myQuqery({
-		searchCondition: data.searchCondition,
-		pageSize: data.pageSize,
-		pageIndex: data.pageIndex,
-		orderCondition: data.orderCondition
+      searchCondition: data.searchCondition,
+      pageSize: data.pageSize,
+      pageIndex: data.pageIndex,
+      orderCondition: data.orderCondition,
     });
     return {
       data: [
         {
-          id: '9842bace-c4d6-4512-8406-9db5f0bac182',
-          personname: '张三',
-          deptname: '研发部',
-          salary: '10000',
-          post: '研发岗',
-          level: 'P6',
-          timestamp: '2020-12-20T03:30:42.000Z',
-          jobtime: '2015-06-07',
-          jobno: '2019697465',
-          education: '本科',
-          major: '专业',
-          mobile: '17667768265',
-          birthdate: '2020-06',
-          sex: '男',
+          id: "9842bace-c4d6-4512-8406-9db5f0bac182",
+          personname: "张三",
+          deptname: "研发部",
+          salary: "10000",
+          post: "研发岗",
+          level: "P6",
+          timestamp: "2020-12-20T03:30:42.000Z",
+          jobtime: "2015-06-07",
+          jobno: "2019697465",
+          education: "本科",
+          major: "专业",
+          mobile: "17667768265",
+          birthdate: "2020-06",
+          sex: "男",
         },
       ],
       total: 1,
@@ -356,14 +354,13 @@ export default class ProTable extends Vue {
 </script>
 ```
 
-## request说明
+## request 说明
 
-`request` 会接收一个Promise对象。对象中必须要有 `data` 和 `total`。request 会接管 el-table loading 的设置。
+`request` 会接收一个 Promise 对象。对象中必须要有 `data` 和 `total`。request 会接管 el-table loading 的设置。
 
-同时在查询表单搜索，分页大小，列排序等发生变化时重新执行，并且会回调出一个params参数。
+同时在查询表单搜索，分页大小，列排序等发生变化时重新执行，并且会回调出一个 params 参数。
 
-
-``` typescript
+```typescript
 // protable.d.ts
 request: (params: AxiosParams)=>Promise<DataSource<T>>
 
@@ -384,12 +381,11 @@ interface SearchParams {
 	operator?: string; // 查询类型
 	value: string; // 搜索内容
 }
-
 ```
 
-### params示例
+### params 示例
 
-以人员信息管理Person表做示例。
+以人员信息管理 Person 表做示例。
 
 ```json
 {
@@ -426,15 +422,13 @@ interface SearchParams {
 select * from person where jobno like '%2019%' and personname like '%张三%' ORDER BY `timestamp` desc LIMIT 0,20
 ```
 
-
-## columns说明
+## columns 说明
 
 ```typescript
-
 interface columns {
-	name: string; // 表格json名称
-	position: string; // 使用位置
-	columns: Array<columnConfig> // 列配置
+  name: string // 表格json名称
+  position: string // 使用位置
+  columns: Array<columnConfig> // 列配置
 }
 
 interface columnConfig {
