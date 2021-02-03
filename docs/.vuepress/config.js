@@ -8,7 +8,6 @@ module.exports = {
   title: 'Element-Pro-Crud',
   description: '基于ElementUI一键CRUD神器',
   theme: 'reco',
-  author: 'BoBo',
   base: '/',
   head: [
     [
