@@ -2,6 +2,9 @@
 .page-title,.home-blog-wrapper,.last-updated{
   display:none !important;
 }
+.vuepress-plugin-demo-block__display{
+  max-height: unset!important;
+}
 .footer-wrapper a[target='blank']{
   display:none!important
 }
@@ -15,7 +18,6 @@
 .nav-links .outbound {
   display: none !important;
 }
-
 .crud-table .theme-default-content{
   max-width: 900px!important;
 }
@@ -42,14 +44,8 @@ blockquote {
   font-weight: 1000 !important;
 }
 table{
-  overflow-x:unset!important;
-  table-layout: fixed;
-  width:100%;
+  margin: 0!important;
 }
-table th:nth-of-type(2) {
-	width: 300px;
-}
-
 // 代码块滚动
 pre {
   overflow-y: auto;
@@ -58,4 +54,11 @@ pre {
 
 .home-blog-wrapper{
   display:none;
+}
+
+.vuepress-plugin-demo-block__wrapper{
+  width: 100%!important;
+}
+.content__default:not(.custom){
+  max-width: 1024px!important;
 }

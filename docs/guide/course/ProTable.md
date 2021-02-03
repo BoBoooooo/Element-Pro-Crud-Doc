@@ -8,7 +8,218 @@ ProTable 基于 El-Table 做了二次封装，托管了分页，查询表单，�
 
 ## 效果
 
-![](https://img.imgdb.cn/item/600a4e703ffa7d37b3f44dac.png)
+::: demo
+``` html
+<template>
+  <pro-table
+    ref="table"
+    :request="request"
+    :columns="columns"
+    :visibleList="{
+      tableTitle: true
+    }"
+    :pageSizes="[5,10,20]"
+    tableTitle="员工管理"
+    orderCondition="timestamp desc"
+  >
+    <template #columnFormatter="{ row, prop }">
+      <el-tag v-if="prop === 'jobno'">{{ row.jobno }}</el-tag>
+      <span v-if="prop === 'personname'"
+        ><i class="el-icon el-icon-user" style="color: red"></i
+        >{{ row.personname }}</span
+      >
+    </template>
+  </pro-table>
+</template>
+
+<script>
+export default {
+  name: 'PersonProTable',
+  data() {
+    return {
+      columns: {
+        name: 'person',
+        position: '人员信息列表',
+        columns: [
+          {
+            prop: 'jobno',
+            label: '工号',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+          {
+            prop: 'personname',
+            label: '姓名',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+          {
+            prop: 'jobtime',
+            label: '入职时间',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+          {
+            prop: 'deptname',
+            label: '所在部门',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+          {
+            prop: 'post',
+            label: '岗位',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+          {
+            prop: 'level',
+            label: '职级',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+          {
+            prop: 'mobile',
+            label: '联系方式',
+            
+            align: 'center',
+            headerAlign: 'center',
+            showOverflowTooltip: true,
+            sortable: 'custom',
+            slotName: '',
+            searchable: true,
+          },
+        ],
+      },
+    };
+  },
+
+  methods: {
+    request(axiosParams) {
+      return Promise.resolve({
+        data: [
+          {
+            id: '9842bace-c4d6-4512-8406-9db5f0bac182',
+            personname: '张三',
+            deptname: '研发部',
+            salary: '10000',
+            post: '研发岗',
+            level: 'P6',
+            timestamp: '2021-01-05T06:51:24.000Z',
+            jobtime: '2015-06-07',
+            jobno: '2019697465',
+            education: '本科',
+            major: '专业',
+            mobile: '17667768265',
+            birthdate: '2020-06',
+            sex: '男',
+          },
+          {
+            id: '038aa5c4-4274-11eb-bb0a-ed55e0675fa7',
+            personname: '邬彦皓',
+            deptname: '研发部',
+            salary: '10000',
+            post: '研发岗',
+            level: 'P6',
+            timestamp: '2021-01-04T15:22:17.000Z',
+            jobtime: '2018-05-23',
+            jobno: '2019548937',
+            education: '博士',
+            major: '专业',
+            mobile: '15686640133',
+            birthdate: '2020-06',
+            sex: '男',
+          },
+          {
+            id: 'ff5d3a66-4273-11eb-bb0a-ed55e0675fa7',
+            personname: '郑士灵',
+            deptname: '研发部',
+            salary: '10000',
+            post: '研发岗',
+            level: 'P6',
+            timestamp: '2021-01-04T09:52:28.000Z',
+            jobtime: '2016-05-17',
+            jobno: '2019914272',
+            education: '本科',
+            major: '专业',
+            mobile: '17684736967',
+            birthdate: '2020-06',
+            sex: '男',
+          },
+          {
+            id: 'ff1b847c-4273-11eb-bb0a-ed55e0675fa7',
+            personname: '米儿天',
+            deptname: '研发部',
+            salary: '10000',
+            post: '研发岗',
+            level: 'P6',
+            timestamp: '2021-01-04T09:45:58.000Z',
+            jobtime: '2015-03-22',
+            jobno: '2019567070',
+            education: '本科',
+            major: '专业',
+            mobile: '13696110769',
+            birthdate: '2020-06',
+            sex: '男',
+          },
+          {
+            id: '038ac626-4274-11eb-bb0a-ed55e0675fa7',
+            personname: '路曼书',
+            deptname: '研发部',
+            salary: '10000',
+            post: '研发岗',
+            level: 'P6',
+            timestamp: '2020-12-20T03:30:42.000Z',
+            jobtime: '2018-10-27',
+            jobno: '2019614945',
+            education: '本科',
+            major: '专业',
+            mobile: '17639302987',
+            birthdate: '2020-06',
+            sex: '男',
+          }
+        ],
+        total: 5,
+      });
+    },
+  },
+};
+</script>
+
+
+```
+
+:::
+
 
 ## 基础使用
 
@@ -17,7 +228,7 @@ ProTable 基于 El-Table 做了二次封装，托管了分页，查询表单，�
 ```javascript
 // PersonModule.vue
 <template>
-  <ProTable :request="request" :columns="columns"></ProTable>
+  <ProTable :page-size="5" :request="request" :columns="columns"></ProTable>
 </template>
 
 <script>
@@ -34,7 +245,7 @@ export default class ProTable extends Vue {
       {
         prop: 'jobno',
         label: '工号',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,
@@ -45,7 +256,7 @@ export default class ProTable extends Vue {
       {
         prop: 'personname',
         label: '姓名',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,
@@ -56,7 +267,7 @@ export default class ProTable extends Vue {
       {
         prop: 'jobtime',
         label: '入职时间',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,
@@ -67,7 +278,7 @@ export default class ProTable extends Vue {
       {
         prop: 'deptname',
         label: '所在部门',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,
@@ -78,7 +289,7 @@ export default class ProTable extends Vue {
       {
         prop: 'post',
         label: '岗位',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,
@@ -89,7 +300,7 @@ export default class ProTable extends Vue {
       {
         prop: 'level',
         label: '职级',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,
@@ -100,7 +311,7 @@ export default class ProTable extends Vue {
       {
         prop: 'mobile',
         label: '联系方式',
-        minWidth: 140,
+        
         align: 'center',
         headerAlign: 'center',
         showOverflowTooltip: true,

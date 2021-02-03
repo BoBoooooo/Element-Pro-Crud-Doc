@@ -10,17 +10,41 @@ module.exports = {
   theme: 'reco',
   base: '/',
   head: [
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
+    ['script', { src: 'https://unpkg.com/element-ui/lib/index.js' }],
+    [
+      'script',
+      {
+        src: 'https://cdn.jsdelivr.net/npm/element-pro-crud/lib/ProCrud.umd.js'
+      }
+    ],
     [
       'link',
       {
         rel: 'icon',
         href: '/favicon.ico'
       }
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/element-pro-crud/lib/ProCrud.css'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/element-ui/lib/theme-chalk/index.css'
+      }
     ]
   ],
+  plugins: ['demo-block'],
   themeConfig: {
     type: 'blog',
     author: 'BoBo',
+    logo: '/home.png',
     authorAvatar: '/home.png',
     codeTheme: 'tomorrow', // default 'tomorrow'
     mode: 'light', // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
@@ -41,11 +65,6 @@ module.exports = {
             text: '文档',
             link: '/frameworks/CrudTable',
             icon: 'reco-document'
-          },
-          {
-            text: 'GitHub',
-            link: 'https://github.com/BoBoooooo/Element-Pro-Crud',
-            icon: 'reco-github'
           },
           {
             text: '在线演示',
@@ -89,7 +108,9 @@ module.exports = {
         lang: 'zh-CN',
         description: 'ElementProCrud一键增删改查'
       }
-    }
+    },
+    repo: 'https://github.com/BoBoooooo/Element-Pro-Crud',
+    repoLabel: '查看源码'
   },
 
   configureWebpack: {

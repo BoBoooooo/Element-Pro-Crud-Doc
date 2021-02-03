@@ -4,9 +4,20 @@
 
 ## 效果
 
-![](https://img.imgdb.cn/item/6010cf3d3ffa7d37b3e5bd3c.png)
-![](https://img.imgdb.cn/item/6010cf793ffa7d37b3e5eb16.png)
 
+::: demo
+``` html
+<template>
+  <form-designer></form-designer>
+</template>
+<script>
+export default {
+
+}
+</script>
+
+```
+:::
 ## 基础使用
 
 ```javascript
