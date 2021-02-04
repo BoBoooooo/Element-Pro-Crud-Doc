@@ -1,12 +1,14 @@
 # ProTable
 
+::: tip
 ProTable 基于 El-Table 做了二次封装，托管了分页，查询表单，数据表格.
+::: 
 
 - 通过表格 json 渲染(可通过`TableDesigner`表格设计器可视化配置)
 - 查询表单
 - 托管分页
 
-## 效果
+## 示例
 
 ::: demo
 

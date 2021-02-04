@@ -65,7 +65,7 @@ module.exports = {
           },
           {
             text: '文档',
-            link: '/frameworks/CrudTable',
+            link: '/frameworks/ProTable',
             icon: 'reco-document'
           },
           {
