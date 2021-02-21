@@ -20,6 +20,19 @@ module.exports = {
       }
     ],
     [
+      'script',
+      {},
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9c9e77225891499d081f17d73c3f31fe";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      `
+    ],
+    [
       'link',
       {
         rel: 'icon',
