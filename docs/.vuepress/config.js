@@ -16,7 +16,7 @@ module.exports = {
       'script',
       {
         src:
-          'https://cdn.jsdelivr.net/npm/element-pro-crud@latest/lib/ProCrud.umd.js'
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.8.8-1/lib/ProCrud.umd.js'
       }
     ],
     [
@@ -44,7 +44,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://cdn.jsdelivr.net/npm/element-pro-crud@latest/lib/ProCrud.css'
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.8.8-1/lib/ProCrud.css'
       }
     ],
     [
@@ -104,6 +104,11 @@ module.exports = {
                 '/guide/course/FormDesigner.md',
                 '/guide/course/TableDesigner.md'
               ]
+            },
+            {
+              title: '进阶',
+              collapsable: false,
+              children: ['/guide/advanced/Linkage.md']
             }
           ],
           '/frameworks/': [

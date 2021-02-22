@@ -12,7 +12,7 @@
 |      value      |    表单初始值     | Object  |     -      |   {}   |
 |     entity(.sync)      |    表单 model     | Object  |     -      |   {}   |
 |    readOnly     |     是否只读      | Boolean | true/false | false  |
-|    setHidden    |  需要隐藏的字段   |  Array  |     -      |   []   |
+|    rules    |  组件联动规则   |  Array  |     -      |   []   |
 |     remote      |   远端数据方法    | Object  |     -      |   {}   |
 | formTableConfig | 子表格组件 config | Object  |     -      |   {}   |
 
