@@ -108,7 +108,10 @@ module.exports = {
             {
               title: '进阶',
               collapsable: false,
-              children: ['/guide/advanced/Linkage.md']
+              children: [
+                '/guide/advanced/Linkage.md',
+                '/guide/advanced/AsyncValue.md'
+              ]
             }
           ],
           '/frameworks/': [
