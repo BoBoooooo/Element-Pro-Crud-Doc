@@ -80,6 +80,7 @@ let remote = {
 
 |         方法名         |            说明            | 参数 |
 | :--------------------: | :------------------------: | :--: |
-|        getData         |    获取表单数据(会校验)    |  -   |
-| getDataWithoutValidate | 不经过验证直接获取表单内容 |  -   |
+|        getData         |    获取表单数据(会校验) Promise   |  -   |
+| getDataWithoutValidate | 不经过验证直接获取表单内容 Promise |  -   |
 |       resetForm        |          重置表单          |  -   |
+|       validate        |          校验表单必填 Promise          |  -   |
