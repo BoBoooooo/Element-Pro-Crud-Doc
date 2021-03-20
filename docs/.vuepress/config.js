@@ -16,7 +16,7 @@ module.exports = {
       'script',
       {
         src:
-          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.1-13/lib/ProCrud.umd.js'
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.2/lib/ProCrud.umd.js'
       }
     ],
     [
@@ -44,7 +44,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.1-13/lib/ProCrud.css'
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.2/lib/ProCrud.css'
       }
     ],
     [
@@ -110,7 +110,8 @@ module.exports = {
               collapsable: false,
               children: [
                 '/guide/advanced/Linkage.md',
-                '/guide/advanced/AsyncValue.md'
+                '/guide/advanced/AsyncValue.md',
+                '/guide/advanced/multipleHeadTable.md'
               ]
             }
           ],
