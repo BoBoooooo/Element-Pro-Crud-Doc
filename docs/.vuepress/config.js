@@ -91,6 +91,11 @@ module.exports = {
             text: '在线演示',
             link: 'http://server.boboooooo.top:9997',
             icon: 'reco-eye'
+          },
+          {
+            text: '表单设计器',
+            link: 'http://server.boboooooo.top:9997/#/form',
+            icon: 'reco-other'
           }
         ],
         sidebar: {
