@@ -11,7 +11,7 @@ pageClass: crud-table
 ## Props
 
 |          参数          |                               说明                                |      类型       |                 可选值                  |  默认值   |
-| :--------------------: | :---------------------------------------------------------------: | :-------------: | :-------------------------------------: | :-------: |
+| :-------------------- | :--------------------------------------------------------------- | :------------- | :------------------------------------- | :------- |
 | `el-table props` |          el-table原生属性见文档          |          https://element.eleme.cn/#/zh-CN/component/table            |
 |       columns        |                       表格json                        |     Object      |             -             | null |
 |       searchMode        |                        查询区域模式                        |     String      |             popover/cover            | popover |
@@ -93,7 +93,7 @@ pageClass: crud-table
 ## Events
 
 | 事件名称  |             说明             |                      回调参数                      |
-| :---------------: | :--------------------------: | :------------------------------------------------: |
+| :------------ | :----------------------- | :--------------------------------------------- |
 | `el-table events` |          el-table原生事件见[文档](https://element.eleme.cn/#/zh-CN/component/table)         |                      |
 |   done    |       表格数据请求完成       |              整个 ProTable 组件对象               |
 | selection-change |           多选事件           |              选中的行 (params: Array)              |
@@ -104,17 +104,16 @@ pageClass: crud-table
 ## Slots
 
 |    插槽名称     |                   说明                   |
-| :-------------: | :--------------------------------------: |
-| columnFormatter | 结合表格设计自定义列使用 |
+| :---------- | :----------------------------------- |
+| columnFormatter/或是自定义插槽名 | 结合表格设计列插槽使用 |
 |  btnBarPrevBtn  |           自定义右上角功能按钮           |
 |    btnCustom    |      自定义操作按钮 参数为 {row}     |
-|    seniorSearchForm    |      自定义高级查询表单      |
 |    dialogFooter    |      弹出表单右侧底部slot     |
 | append  |           el-table原生slot见[文档](https://element.eleme.cn/#/zh-CN/component/table)             |
-| `${column.prop}_header` | 自定义列表头 |
+| `${prop}_header` | 自定义列表头 |
 
 ## Methods
 
 |   方法名    |     说明     | 参数 |
-| :---------: | :----------: | :--: |
+| :------ | :------- | :-- |
 | tableReload | 重新加载列表 |  -   |

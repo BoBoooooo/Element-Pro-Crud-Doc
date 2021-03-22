@@ -4,9 +4,11 @@
  * @copyright: BoBo
  * @Date: 2020-11-18 12:55:02
  */
+const { version } = require('../../package.json')
+
 module.exports = {
   title: 'Element-Pro-Crud',
-  description: '基于ElementUI一键CRUD神器',
+  description: '基于ElementUI一键CRUD神器 (当前版本: ' + version + ')',
   theme: 'reco',
   base: '/',
   head: [
@@ -16,7 +18,9 @@ module.exports = {
       'script',
       {
         src:
-          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.2-1/lib/ProCrud.umd.js'
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@' +
+          version +
+          '/lib/ProCrud.umd.js'
       }
     ],
     [
@@ -44,7 +48,9 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.2-1/lib/ProCrud.css'
+          'https://cdn.jsdelivr.net/npm/element-pro-crud@' +
+          version +
+          '/lib/ProCrud.css'
       }
     ],
     [
@@ -111,7 +117,8 @@ module.exports = {
               children: [
                 '/guide/advanced/Linkage.md',
                 '/guide/advanced/AsyncValue.md',
-                '/guide/advanced/multipleHeadTable.md'
+                '/guide/advanced/multipleHeadTable.md',
+                '/guide/advanced/CustomColumn.md'
               ]
             }
           ],
