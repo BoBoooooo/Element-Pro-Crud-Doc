@@ -9,10 +9,11 @@ npm i element-pro-crud -s
 ```
 
 支持完整引入及按需引入,_`该插件基于ElementUI封装,注意引用顺序`_
+
 ### 完整引入
 
 ```javascript
-import Vue from 'vue';
+import Vue from 'vue'
 import ElementProCrud from 'element-pro-crud'
 import ElementUI from 'element-ui'
 import 'element-pro-crud/lib/ProCrud.css'
@@ -37,6 +38,7 @@ Vue.use(ElementProCrud)
       crud: (dml: DML, tableName: string, data?: object, params?: object)=> AxiosPromise; // 通用CRUD封装
   })
 ```
+
 ## CDN
 
 ```html
@@ -82,3 +84,13 @@ Vue.use(ElementProCrud)
 - `FormDesigner` 表单设计器
 
 - `TableDesigner` 表格设计器
+
+## 第三方库
+
+| 组件名         | 说明           | 版本号    | 说明                           | 引入方式(CDN或者NPM引入均可)                                                                                  |
+| :------------- | :------------- | :-------- | :----------------------------- | :---------------------------------------------------------------------------------------- |
+| element-ui     | 饿了么 UI      | `^2.15.1` | 需在 element-pro-crud 之前引入 | https://unpkg.com/element-ui/lib/index.js                                                 |
+| ace            | 代码在线编辑器 | `^1.4.12` | 表单设计器/表格设计器使用      | https://cdn.bootcdn.net/ajax/libs/ace/test/ace.js                                         |
+| tinymce        | 富文本编辑器   | `^4.7.5`  | 表单设计器/表格设计器使用      | https://cdn.bootcdn.net/ajax/libs/tinymce/4.7.5/tinymce.min.js                            |
+| echarts        | echarts 图表   | `^5.0.1`  | 表单设计器/表格设计器使用      | https://cdn.bootcdn.net/ajax/libs/echarts/5.0.1/echarts.min.js                            |
+| vue-treeselect | 树形下拉框     | `^0.4.0`  | 表单设计器/表格设计器使用      | https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@0.4.0/dist/vue-treeselect.umd.min.js |

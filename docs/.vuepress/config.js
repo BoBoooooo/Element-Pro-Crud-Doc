@@ -23,6 +23,31 @@ module.exports = {
           '/lib/ProCrud.umd.js'
       }
     ],
+    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/ace/test/ace.js' }],
+    [
+      'script',
+      { src: 'https://cdn.bootcdn.net/ajax/libs/echarts/5.0.1/echarts.min.js' }
+    ],
+    [
+      'script',
+      { src: 'https://cdn.bootcdn.net/ajax/libs/tinymce/4.7.5/tinymce.min.js' }
+    ],
+    [
+      'script',
+      {
+        src:
+          'https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@0.4.0/dist/vue-treeselect.umd.min.js'
+      }
+    ],
+    [
+      'script',
+      {},
+      `
+      (function() {
+        window.Vue.component('treeselect', window.VueTreeselect.Treeselect);
+      })();
+      `
+    ],
     [
       'script',
       {},
@@ -58,6 +83,14 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/element-ui/lib/theme-chalk/index.css'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@0.4.0/dist/vue-treeselect.min.css'
       }
     ]
   ],
