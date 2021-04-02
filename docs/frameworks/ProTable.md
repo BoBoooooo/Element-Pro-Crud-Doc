@@ -15,7 +15,6 @@ pageClass: crud-table
 | `el-table props` |          el-table原生属性见文档          |          https://element.eleme.cn/#/zh-CN/component/table            |
 |       columns        |                       表格json                        |     Object      |             -             | null |
 |       request        |                       请求数据方法                        |     详见教程     |             -             | null |
-|       searchMode        |                        查询区域模式                        |     String      |             popover/cover            | popover |
 |       isMultiple       |                           是否开启多选                            |     Boolean     |               true,false                |   false   |
 |     orderCondition     |                             排序条件                              |     String      |                    -                    |   null    |
 |      visibleList       |                         内部元素显示控制(详情见下方)                          |     Object      |                    -                    |    {}     |
