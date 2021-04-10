@@ -1,7 +1,6 @@
 # 表单设计器
 
 ::: tip
-表单设计器,基于`vue-form-making`开源版二次封装。
 [在线地址](http://server.boboooooo.top:9997/#/form)
 :::
 ## 示例
