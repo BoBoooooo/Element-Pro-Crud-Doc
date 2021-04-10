@@ -51,7 +51,7 @@ pageClass: crud-table
 |      dialogFullscreen      |                     表单是否全屏                     | Boolean |                    -                    |  false    |
 |      dialogCloseOnClickModal      |                    表单点击阴影是否可以关闭                     | Boolean |                    -                    |  false    |
 |      showColumnIndex      |                     是否显示序号列                     | Boolean |                    -                    |   false    |
-|      formTableConfig      |                     表单中表格的tableConfig                     | Object |                    -                    |   详情看GenerateFormItem中解释    |
+|      formTableConfig      |                     表单中表格的tableConfig                     | Object |                    -                    |   -    |
 |      formValuesAsync      |                     异步更新表单数据                     | Object |                    -                    |  外层异步传入数据更新表单,注意不能直接修改formValues    |
 |      formRules      |                     表单组件联动规则                     | Array |                    -                    |  表单联动规则详见文档   |
 |      actionColumnWidth      |                     操作列宽度(有时需要直接指定列宽)                    | Number |                    -                    |  null    |

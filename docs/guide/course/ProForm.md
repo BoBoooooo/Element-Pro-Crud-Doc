@@ -1,4 +1,4 @@
-# GenerateForm
+# ProForm
 
 ::: tip
 表单设计器,基于`vue-form-making`开源版二次封装。
@@ -8,8 +8,8 @@
 ``` html
 <template>
   <div>
-    <generate-form :data="jsonData" :remote="remoteFuncs" :value="editData" ref="generateForm">
-    </generate-form>
+    <pro-form :data="jsonData" :remote="remoteFuncs" :value="editData" ref="proForm">
+    </pro-form>
     <el-button style="float:right" type="primary" @click="handleSubmit">提交</el-button>
   </div>
 </template>
@@ -39,7 +39,7 @@
     },
     methods: {
       handleSubmit () {
-        this.$refs.generateForm.getData().then(data => {
+        this.$refs.proForm.getData().then(data => {
           this.$alert(data,'');
         }).catch(e => {
           // data check failed

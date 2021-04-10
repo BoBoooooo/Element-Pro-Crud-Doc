@@ -142,7 +142,7 @@ module.exports = {
               title: '教程',
               collapsable: false,
               children: [
-                '/guide/course/GenerateForm.md',
+                '/guide/course/ProForm.md',
                 '/guide/course/ProTable.md',
                 '/guide/course/CrudTable.md',
                 '/guide/course/FormDesigner.md',
@@ -155,6 +155,7 @@ module.exports = {
               children: [
                 '/guide/advanced/Linkage.md',
                 '/guide/advanced/AsyncValue.md',
+                '/guide/advanced/AsyncStatus.md',
                 '/guide/advanced/multipleHeadTable.md',
                 '/guide/advanced/CustomColumn.md'
               ]
@@ -165,9 +166,9 @@ module.exports = {
               title: 'API',
               collapsable: false,
               children: [
+                '/frameworks/ProForm.md',
                 '/frameworks/ProTable.md',
                 '/frameworks/CrudTable.md',
-                '/frameworks/GenerateForm.md',
                 '/frameworks/FormDesigner.md',
                 '/frameworks/TableDesigner.md'
               ]
@@ -201,15 +202,6 @@ function genEssentialsSidebar(type = '') {
   if (type === 'guide') {
     mapArr = ['/guide/', '/guide/intro/start.md']
   } else if (type === 'frameworks') {
-    mapArr = [
-      '/frameworks/essentials/CrudTable.md',
-      '/frameworks/essentials/FlowableDialog.md',
-      '/frameworks/essentials/GenerateForm.md',
-      '/frameworks/essentials/GenerateFormDialog.md',
-      '/frameworks/essentials/SvgIcon.md',
-      '/frameworks/essentials/Echarts.md',
-      '/frameworks/essentials/FileUpload.md'
-    ]
   }
   return mapArr
 }

@@ -1,7 +1,7 @@
 # 组件联动
 
 ::: tip
-GenerateForm 组件通过`rules`传入联动规则,实现表单联动。
+ProForm 组件通过`rules`传入联动规则,实现表单联动。
 
 目前支持**显示/隐藏/添加必填/取消必填**
 :::
@@ -79,8 +79,8 @@ const rules = [
 ```html
 <template>
   <div>
-    <generate-form :rules="rules" :data="jsonData" :remote="remoteFuncs" :value="editData" ref="generateForm">
-    </generate-form>
+    <pro-form :rules="rules" :data="jsonData" :remote="remoteFuncs" :value="editData" ref="proForm">
+    </pro-form>
     <el-button style="float:right" type="primary" @click="handleSubmit">提交</el-button>
   </div>
 </template>
@@ -144,7 +144,7 @@ const rules = [
     },
     methods: {
       handleSubmit () {
-        this.$refs.generateForm.getData().then(data => {
+        this.$refs.proForm.getData().then(data => {
           this.$alert(data,'');
         }).catch(e => {
           // data check failed

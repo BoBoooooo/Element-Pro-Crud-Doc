@@ -1,39 +1,38 @@
-# 异步更新表单
+# 异步更新表单值
 
 ::: tip
-某些情况在表单以及初始化后,需要异步更新某个字段的内容。
+某些场景下表单初始化后,需要异步更新字段。
 
-通过异步更新 value 属性的值即可,GenerateForm 内部会监听并自动重新给表单赋值。
+使用全局 API `setFormValue/setFieldValue`即可动态更新表单或者字段。
 :::
 
 ## 示例
 
 ::: warning
 
-注意: 异步更新时需要先获取当前表单已输入内容,再进行覆盖,否则新输入内容会丢失!
-
-表单内部若有多选组件,注意异步更新时相应字段类型应为`Array`
+注意: 表单内部若有多选组件,注意更新时相应字段类型应为`Array`
 
 :::
 
 ```javascript
-// 方法一 通过Form API,获取当前表单数据后异步更新value
+// 方法一 通过setFormValue,获取当前表单数据后异步更新表单
 function setFormValue() {
-  this.$refs.generateForm.getDataWithoutValidate().then(data => {
-    this.value = {
-      ...data,
-      sex: '女',
-      personname: '李四'
-    }
+  this.$refs.form.setFormValue({
+    ...this.value,
+    personname: '王五',
+    jobno: '001'
   })
 }
 
-// 方法二 绑定:entity.sync="formData",formData跟当前表单内容相等
-this.value = {
-  ...this.formData,
+// 方法二 通过setFieldValue更新部分字段值,支持单个字段更新或者传入对象更新多个字段。
+
+this.formApi.setFieldValue('sex', '女')
+this.formApi.setFieldValue('personname', '李四')
+
+this.formApi.setFieldValue({
   sex: '女',
   personname: '李四'
-}
+})
 ```
 
 ::: demo
@@ -41,10 +40,12 @@ this.value = {
 ```html
 <template>
   <div>
-    <generate-form  :data="jsonData" :remote="remoteFuncs" :value="value" ref="generateForm">
-    </generate-form>
+    <pro-form  :data="jsonData" :remote="remoteFuncs" :value="value" ref="form">
+    </pro-form>
     <el-button style="float:right;margin-left: 10px" type="primary" @click="setFormValue">设置性别为女,姓名为李四</el-button>
-    <el-button style="float:right" type="primary" @click="handleSubmit">提交</el-button>
+        <el-button style="float:right" type="primary" @click="resetForm">重置表单</el-button>
+
+    <el-button style="float:right" type="primary" @click="handleSubmit">获取表单数据</el-button>
   </div>
 </template>
 
@@ -73,7 +74,7 @@ this.value = {
     },
     methods: {
       handleSubmit () {
-        this.$refs.generateForm.getData().then(data => {
+        this.$refs.form.getData().then(data => {
           this.$alert(data,'');
         }).catch(e => {
           // data check failed
@@ -81,16 +82,16 @@ this.value = {
       },
       // 异步更新时需要先获取当前表单已输入内容,否则初始化后已输入内容会丢失
       setFormValue(){
-          this.$refs.generateForm.getData().then(data => {
-          this.value = {
-            ...data,
-            sex: "女",
-            personname: "李四"
-          }
-        }).catch(e => {
-          // data check failed
-        })
-      }
+         this.$refs.form.setFieldValue({
+        sex: '女',
+        personname: '李四',
+      });
+      this.$message('已更新性别为女,姓名为李四');
+      },
+       resetForm() {
+      this.$refs.form.resetForm();
+      this.$message('已重置表单为初始值');
+    },
     }
   }
 </script>

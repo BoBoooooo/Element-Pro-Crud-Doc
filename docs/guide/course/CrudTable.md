@@ -4,7 +4,7 @@
 
 ## 前情回顾
 - `ProTable` 通过json动态生成表格。
-- `GenerateForm` 通过json动态生成表单。
+- `ProForm` 通过json动态生成表单。
 - 在日常开发过程中,仅仅这2个组件并不满足一键Crud的需求。
 
 **`CrudTable`应运而生,结合上述2个组件继续封装,自动生成增删改查套件。**
