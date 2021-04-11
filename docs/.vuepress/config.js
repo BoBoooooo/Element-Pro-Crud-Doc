@@ -156,6 +156,7 @@ module.exports = {
                 '/guide/advanced/Linkage.md',
                 '/guide/advanced/AsyncValue.md',
                 '/guide/advanced/AsyncStatus.md',
+                '/guide/advanced/Event.md',
                 '/guide/advanced/multipleHeadTable.md',
                 '/guide/advanced/CustomColumn.md'
               ]
