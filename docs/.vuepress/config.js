@@ -20,7 +20,7 @@ module.exports = {
         src:
           'https://cdn.jsdelivr.net/npm/element-pro-crud@' +
           version +
-          '/lib/ProCrud.umd.js'
+          '/lib/pro-crud.js'
       }
     ],
     ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/ace/test/ace.js' }],
@@ -75,7 +75,7 @@ module.exports = {
         href:
           'https://cdn.jsdelivr.net/npm/element-pro-crud@' +
           version +
-          '/lib/ProCrud.css'
+          '/lib/css/pro-crud.css'
       }
     ],
     [
