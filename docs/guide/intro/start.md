@@ -92,7 +92,7 @@ new Vue({
 :::
 
 ::: warning
-注意cdn引入组件名为`kebab-case`
+注意 cdn 引入组件名为`kebab-case`
 :::
 
 ### 全局引入
@@ -129,17 +129,15 @@ new Vue({
 <script src="https://cdn.jsdelivr.net/npm/element-pro-crud/lib/form-designer.js"></script>
 ```
 
-其余组件 cdn 地址请查阅下方组件列表。
-
 ## 组件列表
 
-| 组件名          | 说明               | 
-| :-------------- | :----------------- |
-| `ProForm`       | 根据 json 渲染表单 | 
-| `ProTable`      | 根据 json 渲染表格 | 
-| `CrudTable`     | 增删改查表格       | 
-| `FormDesigner`  | 表单设计器         |
-| `TableDesigner` | 表格设计器         | 
+| 组件名          | 说明         |
+| :-------------- | :----------- |
+| `ProForm`       | 表单生成器   |
+| `ProTable`      | 表格生成器   |
+| `CrudTable`     | 增删改查表格 |
+| `FormDesigner`  | 表单设计器   |
+| `TableDesigner` | 表格设计器   |
 
 ## 第三方库
 
