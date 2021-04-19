@@ -12,6 +12,13 @@ module.exports = {
   theme: 'reco',
   base: '/',
   head: [
+    [
+      'meta',
+      {
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1,user-scalable=no'
+      }
+    ],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
     ['script', { src: 'https://unpkg.com/element-ui/lib/index.js' }],
     [
@@ -105,7 +112,7 @@ module.exports = {
     modePicker: false, // 默认 true，false 不显示模式调节按钮，true 则显示
     noFoundPageByTencent: false,
     sidebar: 'auto',
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     locales: {
       '/': {
         label: '简体中文',
