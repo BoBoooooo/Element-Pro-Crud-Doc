@@ -61,3 +61,4 @@ pageClass: crud-table
 |   方法名    |     说明     | 参数 |
 | :---- | :----- | :--  |
 | tableReload | 重新加载列表 |  -   |
+| clearSelection | 清空已选择项 |  -   |
