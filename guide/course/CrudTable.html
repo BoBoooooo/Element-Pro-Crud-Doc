@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CrudTable | Element-Pro-Crud</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.4-14/lib/pro-crud.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/ace/test/ace.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.1/echarts.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/tinymce/4.7.5/tinymce.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@0.4.0/dist/vue-treeselect.umd.min.js"></script>
+    <script>
+      (function() {
+        window.Vue.component('treeselect', window.VueTreeselect.Treeselect);
+      })();
+      </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9c9e77225891499d081f17d73c3f31fe";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-pro-crud@0.9.4-14/lib/css/pro-crud.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@riophae/vue-treeselect@0.4.0/dist/vue-treeselect.min.css">
+    <meta name="description" content="基于ElementUI一键CRUD神器 (当前版本: 0.9.4-14)">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.0bf47e8c.css" as="style"><link rel="preload" href="/assets/js/app.9585e2cc.js" as="script"><link rel="preload" href="/assets/js/3.da024189.js" as="script"><link rel="preload" href="/assets/js/1.fde7c962.js" as="script"><link rel="preload" href="/assets/js/23.94219838.js" as="script"><link rel="prefetch" href="/assets/js/10.cd042cf6.js"><link rel="prefetch" href="/assets/js/11.daa7ede5.js"><link rel="prefetch" href="/assets/js/12.33a0def2.js"><link rel="prefetch" href="/assets/js/13.04d0e948.js"><link rel="prefetch" href="/assets/js/14.0de074c1.js"><link rel="prefetch" href="/assets/js/15.0a46746b.js"><link rel="prefetch" href="/assets/js/16.e5318ede.js"><link rel="prefetch" href="/assets/js/17.9b00dd66.js"><link rel="prefetch" href="/assets/js/18.03520d9d.js"><link rel="prefetch" href="/assets/js/19.235469ac.js"><link rel="prefetch" href="/assets/js/20.f205d0ab.js"><link rel="prefetch" href="/assets/js/21.403f9047.js"><link rel="prefetch" href="/assets/js/22.af47f121.js"><link rel="prefetch" href="/assets/js/24.1a0f351e.js"><link rel="prefetch" href="/assets/js/25.b2486414.js"><link rel="prefetch" href="/assets/js/26.2ba7b3b5.js"><link rel="prefetch" href="/assets/js/27.54159189.js"><link rel="prefetch" href="/assets/js/28.dfb0a69f.js"><link rel="prefetch" href="/assets/js/4.30790dd7.js"><link rel="prefetch" href="/assets/js/5.e4b577d9.js"><link rel="prefetch" href="/assets/js/6.3244a94c.js"><link rel="prefetch" href="/assets/js/7.06711238.js"><link rel="prefetch" href="/assets/js/8.58d37d99.js"><link rel="prefetch" href="/assets/js/9.ee61d232.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0bf47e8c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-3def6117><div data-v-3def6117><div id="loader-wrapper" class="loading-wrapper" data-v-2c578df8 data-v-3def6117 data-v-3def6117><div class="loader-main" data-v-2c578df8><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-70a509e9 data-v-3def6117 data-v-3def6117><h3 class="title" data-v-70a509e9 data-v-70a509e9>Element-Pro-Crud</h3> <p class="description" data-v-70a509e9 data-v-70a509e9>基于ElementUI一键CRUD神器 (当前版本: 0.9.4-14)</p> <label id="box" class="inputBox" data-v-70a509e9 data-v-70a509e9><input type="password" value="" data-v-70a509e9> <span data-v-70a509e9>Konck! Knock!</span> <button data-v-70a509e9>OK</button></label> <div class="footer" data-v-70a509e9 data-v-70a509e9><span data-v-70a509e9><i class="iconfont reco-theme" data-v-70a509e9></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70a509e9>vuePress-theme-reco</a></span> <span data-v-70a509e9><i class="iconfont reco-copyright" data-v-70a509e9></i> <a data-v-70a509e9><span data-v-70a509e9>BoBo</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div class="hide" data-v-3def6117><header class="navbar" data-v-3def6117><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/home.png" alt="Element-Pro-Crud" class="logo"> <span class="site-name">Element-Pro-Crud</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active"><i class="iconfont reco-home"></i>
+  使用指南
+</a></div><div class="nav-item"><a href="/frameworks/ProTable.html" class="nav-link"><i class="iconfont reco-document"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://server.boboooooo.top:9997" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-eye"></i>
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://server.boboooooo.top:9997/#/form" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  表单设计器
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/BoBoooooo/Element-Pro-Crud" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-查看源码"></i>
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask" data-v-3def6117></div> <aside class="sidebar" data-v-3def6117><div class="personal-info-wrapper" data-v-1a7245e0 data-v-3def6117><img src="/home.png" alt="author-avatar" class="personal-img" data-v-1a7245e0> <h3 class="name" data-v-1a7245e0>
+    BoBo
+  </h3> <div class="num" data-v-1a7245e0><div data-v-1a7245e0><h3 data-v-1a7245e0>18</h3> <h6 data-v-1a7245e0>Articles</h6></div> <div data-v-1a7245e0><h3 data-v-1a7245e0>0</h3> <h6 data-v-1a7245e0>Tags</h6></div></div> <ul class="social-links" data-v-1a7245e0></ul> <hr data-v-1a7245e0></div> <nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active"><i class="iconfont reco-home"></i>
+  使用指南
+</a></div><div class="nav-item"><a href="/frameworks/ProTable.html" class="nav-link"><i class="iconfont reco-document"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://server.boboooooo.top:9997" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-eye"></i>
+  在线演示
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://server.boboooooo.top:9997/#/form" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-other"></i>
+  表单设计器
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/BoBoooooo/Element-Pro-Crud" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-查看源码"></i>
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>使用指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/guide/intro/start.html" class="sidebar-link">快速上手</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>教程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/course/ProForm.html" class="sidebar-link">ProForm</a></li><li><a href="/guide/course/ProTable.html" class="sidebar-link">ProTable</a></li><li><a href="/guide/course/CrudTable.html" aria-current="page" class="active sidebar-link">CrudTable</a></li><li><a href="/guide/course/FormDesigner.html" class="sidebar-link">表单设计器</a></li><li><a href="/guide/course/TableDesigner.html" class="sidebar-link">表格设计器</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/advanced/Linkage.html" class="sidebar-link">组件联动</a></li><li><a href="/guide/advanced/AsyncValue.html" class="sidebar-link">异步更新表单值</a></li><li><a href="/guide/advanced/AsyncStatus.html" class="sidebar-link">异步更新表单状态</a></li><li><a href="/guide/advanced/Event.html" class="sidebar-link">事件监听</a></li><li><a href="/guide/advanced/multipleHeadTable.html" class="sidebar-link">多级表头</a></li><li><a href="/guide/advanced/CustomColumn.html" class="sidebar-link">自定义列/表头</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-70a509e9 data-v-3def6117><h3 class="title" data-v-70a509e9 data-v-70a509e9></h3> <!----> <label id="box" class="inputBox" data-v-70a509e9 data-v-70a509e9><input type="password" value="" data-v-70a509e9> <span data-v-70a509e9>Konck! Knock!</span> <button data-v-70a509e9>OK</button></label> <div class="footer" data-v-70a509e9 data-v-70a509e9><span data-v-70a509e9><i class="iconfont reco-theme" data-v-70a509e9></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70a509e9>vuePress-theme-reco</a></span> <span data-v-70a509e9><i class="iconfont reco-copyright" data-v-70a509e9></i> <a data-v-70a509e9><span data-v-70a509e9>BoBo</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div data-v-3def6117><main class="page"><section><div class="page-title"><h1 class="title">CrudTable</h1> <div data-v-71eee331><i class="iconfont reco-account" data-v-71eee331><span data-v-71eee331>BoBo</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="crudtable"><a href="#crudtable" class="header-anchor">#</a> CrudTable</h1> <div class="custom-block tip"><p class="title"></p><p>CrudTable托管了常见CRUD页面的大部分功能，结合ProForm,ProTable组件实现一键CRUD。</p></div><h2 id="组件概述"><a href="#组件概述" class="header-anchor">#</a> 组件概述</h2> <ul><li><p>托管列表数据请求,高级查询，分页等功能。</p></li> <li><p>预设增删改查按钮。</p></li> <li><p>自动获取表单和表格json。需要预设<code>GetFormDetail</code>,<code>GetTableDetail</code>请求方法。</p></li></ul> <h3 id="加载过程"><a href="#加载过程" class="header-anchor">#</a> 加载过程</h3> <ul><li>请求表单json</li> <li>请求表格json</li> <li>请求列表数据</li> <li>渲染表格</li> <li>渲染表单</li></ul> <h2 id="效果"><a href="#效果" class="header-anchor">#</a> 效果</h2> <p><img src="https://pic.downk.cc/item/5ff3ce3c3ffa7d37b38999ad.png" alt=""> <img src="https://pic.downk.cc/item/5ff529f63ffa7d37b3634b91.png" alt=""></p> <h2 id="初始化"><a href="#初始化" class="header-anchor">#</a> 初始化</h2> <p>注册时需要传入<code>获取表单、表格json</code>以及<code>增删改查通用封装</code>3个方法</p> <div class="language-js extra-class"><pre class="language-js"><code>  Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>CrudTable<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getFormDetail</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">tablename</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">AxiosPromise</span><span class="token punctuation">(</span>formJSON<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 获取某个表单设计json</span>
+    <span class="token function-variable function">getTableDetail</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">tablename</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">AxiosPromise</span><span class="token punctuation">(</span>tableJSON<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 获取某个表格设计json</span>
+    <span class="token function-variable function">crud</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">dml<span class="token operator">:</span> <span class="token constant">DML</span><span class="token punctuation">,</span> tableName<span class="token operator">:</span> string<span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> object<span class="token punctuation">,</span> params<span class="token operator">?</span><span class="token operator">:</span> object</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> AxiosPromise<span class="token punctuation">;</span> <span class="token comment">// 通用CRUD封装</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>crud方法
+增删改查axios方法通用封装</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'@/plugins/axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">optionsType</span> <span class="token punctuation">{</span>
+  url<span class="token operator">:</span> string<span class="token punctuation">;</span> <span class="token comment">// 请求地址</span>
+  method<span class="token operator">:</span> string<span class="token punctuation">;</span> <span class="token comment">// 请求方法 post / get</span>
+  data<span class="token operator">?</span><span class="token operator">:</span> object<span class="token punctuation">;</span> <span class="token comment">// body报体内容</span>
+  params<span class="token operator">?</span><span class="token operator">:</span> object<span class="token punctuation">;</span> <span class="token comment">// queryString内容</span>
+  headers<span class="token operator">?</span><span class="token operator">:</span> any<span class="token punctuation">;</span> <span class="token comment">// 自定义头,用于设置是否加密请求</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 操作类型枚举
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">enum</span> <span class="token constant">DML</span> <span class="token punctuation">{</span>
+  <span class="token constant">INSERT</span> <span class="token operator">=</span> <span class="token string">'add'</span><span class="token punctuation">,</span>
+  <span class="token constant">UPDATE</span> <span class="token operator">=</span> <span class="token string">'update'</span><span class="token punctuation">,</span>
+  <span class="token constant">DELETE</span> <span class="token operator">=</span> <span class="token string">'delete'</span><span class="token punctuation">,</span>
+  <span class="token constant">SELECT</span> <span class="token operator">=</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
+  <span class="token constant">TREE</span> <span class="token operator">=</span> <span class="token string">'tree'</span><span class="token punctuation">,</span>
+  <span class="token constant">TREE_LAZY</span> <span class="token operator">=</span> <span class="token string">'treeByParentID'</span><span class="token punctuation">,</span>
+  <span class="token constant">DETAIL</span> <span class="token operator">=</span> <span class="token string">'detail'</span><span class="token punctuation">,</span>
+  <span class="token constant">DELETES</span> <span class="token operator">=</span> <span class="token string">'deleteByIds'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @param dml 操作类型
+ * @param tableName 数据库表名
+ * @param data body data
+ * @param params query Params
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">crud</span><span class="token punctuation">(</span><span class="token parameter">dml<span class="token operator">:</span> <span class="token constant">DML</span><span class="token punctuation">,</span> tableName<span class="token operator">:</span> string<span class="token punctuation">,</span> data<span class="token operator">:</span> object <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> params<span class="token operator">:</span> any <span class="token operator">=</span> <span class="token keyword">null</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> options<span class="token operator">:</span> optionsType <span class="token operator">=</span> <span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tableName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>dml<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token comment">// 例如person表的查询接口为  /person/list</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 以下请求通过包体传参</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'list,treeByParentID'</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>dml<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// list接口高级查询条件拼接</span>
+    options<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span>
+      orderCondition<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+      searchCondition<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      pageIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      pageSize<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token operator">...</span>data<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    options<span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  options<span class="token punctuation">.</span>params <span class="token operator">=</span> params<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> axios<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ul><li>获取表单表格JSON方法</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 获取数据库中所有表名
+ *
+ * @returns 所有表名
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getTables</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'/form/getTables'</span><span class="token punctuation">,</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 根据表名获取表格的设计json等信息
+ *
+ * @param {String} tablename
+ * @returns 表格设计json
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getTableDetail</span><span class="token punctuation">(</span><span class="token parameter">tablename</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'/dynamictables/detail'</span><span class="token punctuation">,</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    params<span class="token operator">:</span> <span class="token punctuation">{</span> tablename <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 获取所有表单设计json
+ * @param tablename
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getFormDetail</span><span class="token punctuation">(</span><span class="token parameter">tablename</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'/form/detail'</span><span class="token punctuation">,</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    params<span class="token operator">:</span> <span class="token punctuation">{</span> tablename <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 获取表中所有字段信息
+ * @param {String} tablename
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getFormKey</span><span class="token punctuation">(</span><span class="token parameter">tablename</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'/form/getKey'</span><span class="token punctuation">,</span>
+    method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    params<span class="token operator">:</span> <span class="token punctuation">{</span> tablename <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="使用步骤"><a href="#使用步骤" class="header-anchor">#</a> 使用步骤</h2> <ul><li>绘制表单</li> <li>绘制表格</li> <li>嵌入CrudTable代码</li></ul> <h2 id="基础使用"><a href="#基础使用" class="header-anchor">#</a> 基础使用</h2> <p>假设我们有一张人员信息表<code>Person</code>需要对其实现基础的增删改查。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// PersonModule.vue</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>CrudTable ref<span class="token operator">=</span><span class="token string">&quot;table&quot;</span> <span class="token operator">:</span>tableName<span class="token operator">=</span><span class="token string">&quot;tableName&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'PersonModule'</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      tableName<span class="token operator">:</span> <span class="token string">'person'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>上述示例代码:</p> <p><strong>默认读取的表单、表格名称为<code>person</code></strong></p> <p><strong>默认请求<code>/person/list</code>接口获取列表数据</strong></p> <p>如需自定义表单名称prop传入 <code>dialogFormDesignerName=&quot;自定义表单name&quot;</code></p> <p>自定义表格名称prop传入 <code>tableDesignerName=&quot;自定义表格name&quot;</code></p> <h2 id="加载过程-2"><a href="#加载过程-2" class="header-anchor">#</a> 加载过程</h2> <ul><li>请求后台接口获取表格json (例如: /form/detail?tablename=person)</li> <li>请求后台接口获取表单json (例如: /dynamictables/detail?tablename=person)</li> <li>请求列表数据 (例如: /person/list)</li> <li>渲染列表及表单</li></ul> <h2 id="列表数据请求格式"><a href="#列表数据请求格式" class="header-anchor">#</a> 列表数据请求格式</h2> <p>此处以<code>/person/list</code>举例</p> <ul><li>请求体</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;orderCondition&quot;</span><span class="token operator">:</span> <span class="token string">&quot;timestamp desc&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 排序条件 field asc | desc</span>
+	<span class="token property">&quot;searchCondition&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>               <span class="token comment">// 查询条件</span>
+		<span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jobno&quot;</span><span class="token punctuation">,</span>                
+		<span class="token property">&quot;operator&quot;</span><span class="token operator">:</span> <span class="token string">&quot;like&quot;</span><span class="token punctuation">,</span>              
+		<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019&quot;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token string">&quot;personname&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;operator&quot;</span><span class="token operator">:</span> <span class="token string">&quot;like&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;pageIndex&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>                     <span class="token comment">// 当前页码</span>
+	<span class="token property">&quot;pageSize&quot;</span><span class="token operator">:</span> <span class="token number">20</span>                      <span class="token comment">// 页码大小</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><p><strong><code>searchCondition</code>为高级查询数组:</strong></p> <p><strong>字段名<code>field</code>操作符<code>operator</code>查询内容<code>value</code></strong></p></li> <li><p><strong><code>operator</code>操作符支持数据库常见的几种关键字</strong></p></li></ul> <table><thead><tr><th>eq</th> <th>like</th> <th>neq</th> <th>notNull</th> <th>isNull</th> <th>gt</th> <th>lt</th> <th>egt</th> <th>elt</th></tr></thead> <tbody><tr><td>=</td> <td>like '%%'</td> <td>!=</td> <td>not null</td> <td>is null</td> <td>&gt;</td> <td>&lt;</td> <td>&gt;=</td> <td>&lt;=</td></tr></tbody></table> <p>上述查询条件会生成如下sql</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> person <span class="token keyword">where</span> jobno <span class="token operator">like</span> <span class="token string">'%2019%'</span> <span class="token operator">and</span> personname <span class="token operator">like</span> <span class="token string">'%张三%'</span> <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> <span class="token punctuation">`</span><span class="token keyword">timestamp</span><span class="token punctuation">`</span> <span class="token keyword">desc</span> <span class="token keyword">LIMIT</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">20</span>
+</code></pre></div><ul><li>返回值</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;9842bace-c4d6-4512-8406-9db5f0bac182&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;personname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;deptname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;研发部&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;salary&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10000&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;post&quot;</span><span class="token operator">:</span> <span class="token string">&quot;研发岗&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;level&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P6&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-12-20T03:30:42.000Z&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;jobtime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2015-06-07&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;jobno&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019697465&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;education&quot;</span><span class="token operator">:</span> <span class="token string">&quot;本科&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;major&quot;</span><span class="token operator">:</span> <span class="token string">&quot;专业&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;mobile&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17667768265&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;birthdate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-06&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;sex&quot;</span><span class="token operator">:</span> <span class="token string">&quot;男&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="表格json"><a href="#表格json" class="header-anchor">#</a> 表格json</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jobno&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;工号&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;personname&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;姓名&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jobtime&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;入职时间&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;deptname&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;所在部门&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;post&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;岗位&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;level&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;职级&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;mobile&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;联系方式&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;showOverflowTooltip&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;custom&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;prop&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;操作&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;minWidth&quot;</span><span class="token operator">:</span> <span class="token number">180</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;headerAlign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;slotName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;actionColumn&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;fixed&quot;</span><span class="token operator">:</span> <span class="token string">&quot;right&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;sortable&quot;</span><span class="token operator">:</span> <span class="token string">&quot;false&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;searchable&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+	<span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="类型说明"><a href="#类型说明" class="header-anchor">#</a> 类型说明</h3> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">columnConfig</span> <span class="token punctuation">{</span>
+	prop<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> <span class="token comment">// 字段名</span>
+	label<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> <span class="token comment">// 表头</span>
+	minWidth<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span> <span class="token comment">// 最小宽度</span>
+	align<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span> <span class="token comment">// 内容对齐方式</span>
+	headerAlign<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span> <span class="token comment">// 表头对齐方式</span>
+	slotName<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> <span class="token comment">// 自定义插槽名</span>
+	fixed<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> <span class="token comment">// 列对齐方式</span>
+	sortable<span class="token operator">:</span> <span class="token string">'false'</span> <span class="token operator">|</span> <span class="token string">'custom'</span> <span class="token comment">// 是否可排序</span>
+	searchable<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否可查询</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="表单json"><a href="#表单json" class="header-anchor">#</a> 表单json</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+	<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;工号&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;请输入工号&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jobno&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jobno&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;工号格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;姓名&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;personname&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;personname&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;姓名1格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516929000_36539&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.0578278502302394&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516929000_36539&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;radio&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;性别&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/dot-circle&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;inline&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;showLabel&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;男&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;选项1&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;女&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;选项2&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remote&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;props&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;label&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608432399000_10952&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608432399000_10952&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sex&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;性别格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;select&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;文化程度&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/caret-square-down&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;multiple&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;clearable&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;showLabel&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;allowCreate&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下拉框1&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下拉框2&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下拉框3&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remote&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dict&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;本科&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;本科&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;大专及以下&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;大专及以下&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;博士&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;博士&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;研究生&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;研究生&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;博士后&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;博士后&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;props&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;label&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608433134000_41081&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dictType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;962e3a39-928d-4470-a9f3-8efda17f2692&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608433134000_41081&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;education&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516929000_36539&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.4979627182416866&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516929000_36539&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;所在部门&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;deptname&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;deptname&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;岗位&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;post&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;post&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;岗位格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516929000_36539&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.6063054944523363&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516929000_36539&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;select&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;职级&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/caret-square-down&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;multiple&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;clearable&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;showLabel&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;allowCreate&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下拉框1&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下拉框2&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;下拉框3&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remote&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dict&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P6&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P6&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P8&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P8&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P5&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P5&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P9&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P9&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P7&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P7&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P10&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;P10&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;props&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;label&quot;</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608433344000_95961&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dictType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ac3f1996-bcec-4604-b465-eaf5d1208e79&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608433344000_95961&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;level&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;岗位格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;入职时间&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/calendar-alt&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;editable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;clearable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;startPlaceholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;endPlaceholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM-dd&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608432345000_20310&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608432345000_20310&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jobtime&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;入职时间格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516929000_36539&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.9740509729876656&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516929000_36539&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;薪资&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;salary&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;salary&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;联系方式&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.7423405755223678&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;mobile&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;单行文本格式不正确&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516929000_36539&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.3680056593272678&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516929000_36539&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;专业&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/keyboard&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dataType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516931000_89639&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;major&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;major&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;出生年月&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;hidden&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;regular/calendar-alt&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;defaultValue&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;readonly&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;disabled&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;editable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;clearable&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;startPlaceholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;endPlaceholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;month&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yyyy-MM&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;width&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100%&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608432438000_26217&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608432438000_26217&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;birthdate&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1575516929000_36539&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516931000_0.22046952760726568&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1575516929000_36539&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grid&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;栅格布局(1列)&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;th&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;columns&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+			<span class="token property">&quot;span&quot;</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+				<span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;table&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;工作履历&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;table&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+					<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608432102000_18779&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;visibleList&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+						<span class="token property">&quot;actionColumnBtnEdit&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;actionColumnBtnDetail&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;btnAdd&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;actionColumn&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;tableTitle&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;searchForm&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;actionColumnBtnDel&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;conditionTitle&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;btnExport&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+						<span class="token property">&quot;btnImport&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+					<span class="token punctuation">}</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;tableParams&quot;</span><span class="token operator">:</span> <span class="token string">&quot;personid,id&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;prefill&quot;</span><span class="token operator">:</span> <span class="token string">&quot;personid,id&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;tableTitle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;showPagination&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;isMultiple&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;tableName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;resume&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;tableDesignerName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;person_resume&quot;</span><span class="token punctuation">,</span>
+					<span class="token property">&quot;dialogFormDesignerName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;person_resume&quot;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608432102000_18779&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;人员履历表&quot;</span><span class="token punctuation">,</span>
+				<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;gutter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;justify&quot;</span><span class="token operator">:</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;align&quot;</span><span class="token operator">:</span> <span class="token string">&quot;top&quot;</span><span class="token punctuation">,</span>
+			<span class="token property">&quot;remoteFunc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;func_1608432099000_43356&quot;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608432099000_43356&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;model&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1608432099000_43356&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">&quot;labelWidth&quot;</span><span class="token operator">:</span> <span class="token number">140</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;labelPosition&quot;</span><span class="token operator">:</span> <span class="token string">&quot;right&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;size&quot;</span><span class="token operator">:</span> <span class="token string">&quot;small&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;isTableClass&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;person&quot;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/guide/course/ProTable.html" class="prev">
+            ProTable
+          </a></span> <span class="next"><a href="/guide/course/FormDesigner.html">
+            表单设计器
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-65c007c6><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#组件概述" class="sidebar-link reco-side-组件概述" data-v-65c007c6>组件概述</a></li><li class="level-3" data-v-65c007c6><a href="/guide/course/CrudTable.html#加载过程" class="sidebar-link reco-side-加载过程" data-v-65c007c6>加载过程</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#效果" class="sidebar-link reco-side-效果" data-v-65c007c6>效果</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#初始化" class="sidebar-link reco-side-初始化" data-v-65c007c6>初始化</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#使用步骤" class="sidebar-link reco-side-使用步骤" data-v-65c007c6>使用步骤</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#基础使用" class="sidebar-link reco-side-基础使用" data-v-65c007c6>基础使用</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#加载过程-2" class="sidebar-link reco-side-加载过程-2" data-v-65c007c6>加载过程</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#列表数据请求格式" class="sidebar-link reco-side-列表数据请求格式" data-v-65c007c6>列表数据请求格式</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#表格json" class="sidebar-link reco-side-表格json" data-v-65c007c6>表格json</a></li><li class="level-3" data-v-65c007c6><a href="/guide/course/CrudTable.html#类型说明" class="sidebar-link reco-side-类型说明" data-v-65c007c6>类型说明</a></li><li class="level-2" data-v-65c007c6><a href="/guide/course/CrudTable.html#表单json" class="sidebar-link reco-side-表单json" data-v-65c007c6>表单json</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div></div></div>
+    <script src="/assets/js/app.9585e2cc.js" defer></script><script src="/assets/js/3.da024189.js" defer></script><script src="/assets/js/1.fde7c962.js" defer></script><script src="/assets/js/23.94219838.js" defer></script>
+  </body>
+</html>
